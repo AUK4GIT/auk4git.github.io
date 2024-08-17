@@ -13,6 +13,20 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
+
+}
+
+/* Add to styles.css */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+body {
+    padding-top: 250px; /* Adjust based on the header's height to ensure content is not hidden behind it */
 }
 
 .profile-img {

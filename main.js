@@ -17,3 +17,17 @@ setInterval(function () {
         }, 500);
     }
 }, 5000);
+
+// Add to main.js
+window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var img = document.querySelector('.profile-img');
+    var newSize = 100 - scrollPosition / 10; // Adjust the division factor to control the rate of size change
+
+    // Set minimum and maximum size limits
+    newSize = Math.max(60, newSize); // Minimum size
+    newSize = Math.min(100, newSize); // Maximum size
+
+    img.style.width = newSize + 'px';
+    img.style.height = newSize + 'px';
+});
